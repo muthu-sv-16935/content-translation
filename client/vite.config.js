@@ -9,7 +9,9 @@ export default defineConfig({
   root: __dirname,
   plugins: [react()],
   build: {
-    outDir: path.resolve(__dirname, '../dist'),
+    // Use process.cwd() so the dist folder always lands at the project root,
+    // regardless of how/where the vite config file is resolved at build time.
+    outDir: path.resolve(process.cwd(), 'dist'),
     emptyOutDir: true,
   },
   server: {
