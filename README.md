@@ -260,7 +260,7 @@ npm run build
 npm run server
 ```
 
-Then open `http://localhost:3002` (or your `PORT`). The server serves the built client from `client/dist`.
+Then open `http://localhost:3002` (or your `PORT`). The server serves the built client from `dist`.
 
 ### Scripts
 
@@ -269,7 +269,7 @@ Then open `http://localhost:3002` (or your `PORT`). The server serves the built 
 | `npm run dev`    | Run server and Vite client together     |
 | `npm run server` | Backend only                             |
 | `npm run client` | Vite dev server only                     |
-| `npm run build`  | Build client to `client/dist`            |
+| `npm run build`  | Build client to `dist`                   |
 | `npm run preview` | Preview the built client               |
 | `npm start`      | Build client then start server            |
 

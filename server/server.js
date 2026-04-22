@@ -55,9 +55,9 @@ if (hasFrontend) {
 }
 
 function startServer(port, maxTries = 5) {
-  const server = app.listen(port, '127.0.0.1', () => {
-    console.log(`Server running at http://127.0.0.1:${port}`);
-    if (hasFrontend) console.log(`Open http://localhost:${port} in your browser for the app.`);
+  const server = app.listen(port, '0.0.0.0', () => {
+    console.log(`Server running at http://0.0.0.0:${port}`);
+    if (hasFrontend) console.log(`Open the public URL provided by your host for the app.`);
   });
   server.on('error', (err) => {
     if (err.code === 'EADDRINUSE' && maxTries > 0) {

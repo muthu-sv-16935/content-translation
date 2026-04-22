@@ -5,11 +5,11 @@
 | How you run | Port | What’s served | When CSS updates |
 |-------------|------|----------------|------------------|
 | **`npm run dev`** | **5173** (Vite) | Live source from `client/src/` with HMR | **Immediately** (no restart) |
-| **`npm run dev`** | 3002 (Express) | Pre-built files from `client/dist/` | Only after **rebuild** |
-| **`npm run server`** only | 3002 | Pre-built files from `client/dist/` | Only after **rebuild** |
+| **`npm run dev`** | 3002 (Express) | Pre-built files from `dist/` | Only after **rebuild** |
+| **`npm run server`** only | 3002 | Pre-built files from `dist/` | Only after **rebuild** |
 
 - **Port 5173** = Vite dev server. It serves your current `App.css` and other source files and supports hot module replacement (HMR). **Use this URL while developing so CSS changes show right away.**
-- **Port 3002** = Express server. It only serves the **last build** in `client/dist/`. Restarting the server does **not** rebuild the frontend, so CSS changes in `client/src/` are not included until you build again.
+- **Port 3002** = Express server. It only serves the **last build** in `dist/`. Restarting the server does **not** rebuild the frontend, so CSS changes in `client/src/` are not included until you build again.
 
 ## What to do
 
