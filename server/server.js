@@ -9,7 +9,7 @@ import translateFileRouter from './routes/translateFile.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: path.join(__dirname, '.env') });
-const DIST_DIR = path.join(__dirname, '..', 'client', 'dist');
+const DIST_DIR = path.join(__dirname, '..', 'dist');
 
 const app = express();
 const PORT = process.env.PORT || 3002;
@@ -24,7 +24,7 @@ app.get('/health', (_, res) => {
   res.json({ status: 'ok' });
 });
 
-// Serve built frontend from client/dist so one URL (localhost:3002) works
+// Serve built frontend from repo root dist so one URL (localhost:3002) works
 const hasFrontend = fs.existsSync(DIST_DIR) && fs.existsSync(path.join(DIST_DIR, 'index.html'));
 
 if (hasFrontend) {
