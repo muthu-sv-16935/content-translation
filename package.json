@@ -8,7 +8,7 @@
     "start": "npm run build && cd server && node server.js",
     "server": "cd server && node server.js",
     "client": "vite",
-    "build": "vite build",
+    "build": "vite build --config client/vite.config.js",
     "preview": "vite preview",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
